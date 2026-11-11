@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DEVAN — Creative Developer &amp; Tech Designer | India</title>
+  <meta name="description" content="DEVAPRIYAN.G.S (Devan): creative developer and tech designer. Code, design, motion, products and interactive experiences.">
+  <meta name="theme-color" content="#050506">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=3">
+  <script type="importmap">{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }</script>
+</head>
+<body class="is-intro">
+
+  <!-- ===== fixed background layers ===== -->
+  <canvas id="scene" aria-hidden="true"></canvas>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ===== header ===== -->
+  <header class="site-header">
+    <a class="brand" href="#intro" aria-label="Devan, back to top">DEVAN</a>
+    <p class="manifest"><span>I TURN</span><br><span>COMPLEX IDEAS</span><br><span>INTO INTERACTIVE EXPERIENCES.</span></p>
+    <nav class="main-nav" id="mainNav" aria-label="Main">
+      <a href="#work">WORK</a>
+      <a href="#about">SKILLS</a>
+      <a data-link="github" target="_blank" rel="noopener">GITHUB</a>
+      <a href="#team">ABOUT ME</a>
+      <a href="#contact" class="contact-nav">CONTACT ↗</a>
+      <div class="lang-selector" id="langSelector">
+        <button class="lang-toggle" id="langToggle" aria-expanded="false" aria-haspopup="true">EN <span>⌄</span></button>
+        <div class="lang-menu" id="langMenu" role="menu">
+          <a href="#" class="is-active" role="menuitem"><span>EN</span><small>English</small></a>
+          <a class="is-soon" role="menuitem" aria-disabled="true"><span>+</span><small>More soon</small></a>
+        </div>
+      </div>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">MENU</button>
+  </header>
+
+  <!-- ===== fixed UI over the 3D scene ===== -->
+  <div class="viewport-ui">
+    <div class="chapter right" id="chapter" aria-live="polite">
+      <div class="chapter-index" id="chapterIndex">01 / 05</div>
+      <div class="chapter-rule"></div>
+      <h1 id="chapterTitle">CODE</h1>
+      <p id="chapterDesc">Ideas that turn into products.<br>Clean, fast, built to last.</p>
+      <button class="chapter-enter" id="enter" aria-label="Open chapter">↗</button>
+    </div>
+    <div class="scroll-hint"><span>SCROLL TO EXPLORE</span><span class="line"></span></div>
+    <div class="studio-credit">CREATIVE DEVELOPER<br>&amp; TECH DESIGNER</div>
+    <div class="page-progress"><span id="progress"></span></div>
+  </div>
+
+  <main>
+    <!-- ===== intro ===== -->
+    <section class="intro" id="intro">
+      <div class="intro-orbit" aria-hidden="true"></div>
+      <div class="intro-inner">
+        <div class="intro-label"><span>CREATIVE DEVELOPER &amp; TECH DESIGNER</span><b>/</b><span>INDIA</span></div>
+        <h1 id="introHeadline">HI, I’M<br><em>DEVAN.</em></h1>
+        <div class="intro-bottom">
+          <p>Code. Design. Motion. Interfaces. Experiences.<br>Whatever the challenge, I make it <strong>DEVAN.</strong></p>
+          <a class="explore-link" href="#work">SCROLL TO EXPLORE <span>↓</span></a>
+        </div>
+      </div>
+      <div class="intro-line"></div>
+    </section>
+
+    <!-- ===== work: 3D scroll area ===== -->
+    <div class="scroll-area" id="work"></div>
+
+    <!-- ===== about / skills ===== -->
+    <section class="about" id="about">
+      <div class="about-eyebrow motion-reveal">NOT JUST A DEVELOPER.</div>
+      <h2 id="aboutTitle" class="motion-reveal">THE IDEA<br>COMES <i>FIRST.</i></h2>
+      <div class="about-grid">
+        <p class="motion-reveal">I don’t start with a framework. I start with a question: <strong>what does this actually need to do, and how should it feel?</strong></p>
+        <p class="motion-reveal">Then I find the right form: a website, an app, an interface, a motion piece, or something that doesn’t have a name yet. Then I design it and build it.</p>
+      </div>
+      <div class="about-links motion-reveal">
+        <span>FRONTEND</span><span>UI / UX DESIGN</span><span>MOTION</span><span>CREATIVE CODING</span><span>3D WEB</span>
+      </div>
+
+      <div class="gg-svc">
+        <div class="gg-svc__grid">
+          <!-- 01: film / run -->
+          <article class="gg-svc__tile fx-film motion-reveal">
+            <span class="fx-bar fx-bar--top"></span><span class="fx-bar fx-bar--bottom"></span>
+            <div class="gg-svc__top"><span class="gg-svc__num">01</span><span class="gg-svc__arrow">↗</span></div>
+            <div class="gg-svc__body">
+              <h3 class="gg-svc__title">Web development</h3>
+              <p class="gg-svc__desc">Responsive websites and web apps. From idea and wireframe to a fast, deployed product.</p>
+              <p class="gg-svc__tags">HTML · CSS · JavaScript · React</p>
+            </div>
+            <span class="fx-film-hud"><span class="fx-rec">REC</span><span class="fx-time">00:00:00:00</span></span>
+          </article>
+
+          <!-- 02: social feed -->
+          <article class="gg-svc__tile fx-social motion-reveal">
+            <div class="gg-svc__top"><span class="gg-svc__num">02</span><span class="gg-svc__arrow">↗</span></div>
+            <div class="gg-svc__body">
+              <h3 class="gg-svc__title"><span class="fx-social-base">UI / UX design</span><span class="fx-social-track" aria-hidden="true"><span>UI / UX design</span><span class="alt">UI / UX design</span></span></h3>
+              <p class="gg-svc__desc">Interfaces and flows that people understand at first glance and enjoy using.</p>
+              <p class="gg-svc__tags">Figma · Wireframes · Prototypes</p>
+            </div>
+            <span class="fx-hearts" aria-hidden="true"></span>
+            <span class="fx-likes">♥ 1 204</span>
+          </article>
+
+          <!-- 03: bouncing letters -->
+          <article class="gg-svc__tile fx-bounce motion-reveal">
+            <div class="gg-svc__top"><span class="gg-svc__num">03</span><span class="gg-svc__arrow">↗</span></div>
+            <div class="gg-svc__body">
+              <h3 class="gg-svc__title" data-split>Motion</h3>
+              <p class="gg-svc__desc">Animation and micro-interactions: scroll stories, transitions and playful details.</p>
+              <p class="gg-svc__tags">CSS · Canvas · Scroll FX · Lottie</p>
+            </div>
+          </article>
+
+          <!-- 04: spotlight -->
+          <article class="gg-svc__tile fx-spot motion-reveal">
+            <div class="gg-svc__top"><span class="gg-svc__num">04</span><span class="gg-svc__arrow">↗</span></div>
+            <div class="gg-svc__body">
+              <h3 class="gg-svc__title">Creative coding</h3>
+              <p class="gg-svc__desc">Generative visuals and experiments. Code used as a sketchbook for new ideas.</p>
+              <p class="gg-svc__tags">Generative · WebGL · Experiments</p>
+            </div>
+            <span class="fx-spotlight" aria-hidden="true"></span>
+            <span class="fx-episode">EXP. 1 / 60</span>
+          </article>
+
+          <!-- 05: extruded 3D -->
+          <article class="gg-svc__tile fx-cgi motion-reveal">
+            <div class="gg-svc__top"><span class="gg-svc__num">05</span><span class="gg-svc__arrow">↗</span></div>
+            <div class="gg-svc__body">
+              <h3 class="gg-svc__title">3D &amp; WebGL</h3>
+              <p class="gg-svc__desc">Three-dimensional scenes and product visuals that run right in the browser.</p>
+              <p class="gg-svc__tags">Three.js · Shaders · 3D</p>
+            </div>
+            <span class="fx-grid" aria-hidden="true"></span>
+          </article>
+
+          <!-- 06: arcade -->
+          <article class="gg-svc__tile fx-game motion-reveal">
+            <div class="gg-svc__top"><span class="gg-svc__num">06</span><span class="gg-svc__arrow">↗</span></div>
+            <div class="gg-svc__body">
+              <h3 class="gg-svc__title" data-split>APPS &amp; TOOLS</h3>
+              <p class="gg-svc__desc">I design and build apps, tools and interactive experiences that people come back to.</p>
+              <p class="gg-svc__tags">Apps · Tools · Interactive</p>
+            </div>
+            <span class="fx-game-hud"><span>1UP</span><span class="fx-score">SCORE 000000</span></span>
+            <span class="fx-game-start">▶ PRESS START</span>
+          </article>
+
+          <!-- 07: accent / prompt -->
+          <a class="gg-svc__tile gg-svc__tile--accent fx-prompt motion-reveal" href="#contact">
+            <div class="gg-svc__top"><span class="gg-svc__num">07 · Open to work</span><span class="gg-svc__arrow">↗</span></div>
+            <div class="gg-svc__body">
+              <h3 class="gg-svc__title">Let’s build together</h3>
+              <p class="gg-svc__desc">Freelance projects, internships and collaborations with teams and studios.</p>
+              <p class="gg-svc__tags">Freelance · Teams · Collabs</p>
+            </div>
+            <span class="fx-prompt-line"><span class="fx-typed"></span><span class="fx-caret">▍</span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== about me: cinematic ===== -->
+    <section class="team founder-cinematic" id="team">
+      <div class="founder-backdrop">
+        <div class="founder-media" id="founderMedia">
+          <div class="founder-photo" id="founderPhoto" role="img" aria-label="Portrait of Devapriyan G.S in a blazer and white shirt"></div>
+          <div class="founder-frames" id="founderFrames" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+        <div class="founder-video-shade"></div>
+        <div class="founder-photo-name" aria-hidden="true"><span data-fullname>DEVAPRIYAN.G.S</span></div>
+        <div class="founder-video-progress"><span id="founderVideoProgress"></span></div>
+      </div>
+
+      <div class="founder-content">
+        <div class="team-heading">
+          <h2 id="teamTitle" class="motion-reveal">IDEAS ARE<br><em>HUMAN.</em></h2>
+          <p class="team-lead motion-reveal">Creative experience across interfaces, products, motion and technology — connected by one belief: great execution starts with an idea.</p>
+        </div>
+
+        <div class="team-grid">
+          <div class="team-profile">
+            <div class="team-kicker motion-reveal">CREATIVE DEVELOPER / TECH DESIGNER</div>
+            <h3 class="motion-reveal">Devapriyan G.S<span class="team-dot">.</span></h3>
+            <div class="team-counter motion-reveal"><strong>∞</strong><span>CURIOSITY FOR NEW TECHNOLOGY</span></div>
+            <p class="team-bio motion-reveal">I’m Devan, a creative developer and tech designer. I connect design thinking with front-end engineering, motion and creative technology, making complex things simple and simple things memorable.</p>
+            <p class="team-bio team-bio-second motion-reveal">Every project starts the same way: a sharp idea first, then whatever design and code it takes to make it real.</p>
+            <div class="team-awards">
+              <div class="team-awards-label motion-reveal">CURRENT FOCUS</div>
+              <div class="team-award motion-reveal"><span>01</span><p>Interactive websites and scroll-driven experiences</p></div>
+              <div class="team-award motion-reveal"><span>02</span><p>UI / UX design for apps and digital products</p></div>
+              <div class="team-award motion-reveal"><span>03</span><p>Creative coding, motion and 3D on the web</p></div>
+              <p class="team-note motion-reveal">Selected work and code are on GitHub; experience and background on LinkedIn.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="founder-signature motion-reveal">
+          <span><span data-fullname>DEVAPRIYAN.G.S</span> / DEVAN</span>
+          <div class="founder-social">
+            <a class="social-icon" data-link="linkedin" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="9" width="4" height="12"/><circle cx="5" cy="4.5" r="2.2"/><path d="M10 9h3.8v1.9c.6-1.1 2-2.2 4.1-2.2 3.6 0 4.1 2.3 4.1 5.3V21h-4v-6.2c0-1.5 0-3.3-2-3.3s-2.1 1.5-2.1 3.2V21H10z"/></svg>
+            </a>
+            <a class="social-icon" data-link="github" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.4 1.1 2.9.8.1-.7.4-1.1.6-1.3-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.6 9.6 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></svg>
+            </a>
+            <a class="social-icon" data-link="email" aria-label="Email">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3zm2 2v.4l7 4.6 7-4.6V7zm14 2.8-7 4.6-7-4.6V17h14z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== contact ===== -->
+  <footer class="contact" id="contact">
+    <div class="contact-heading" id="contactTitle">LET’S MAKE IT<br><em>DEVAN.</em></div>
+    <div class="contact-links">
+      <a class="contact-cta" data-link="email"><span class="cta-text" data-email>hello@yourdomain.com</span>
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M8 24 24 8M11 8h13v13" fill="none" stroke="currentColor" stroke-width="2.2"/></svg></a>
+      <a class="contact-cta" data-link="linkedin" target="_blank" rel="noopener"><span class="cta-text">linkedin / devan</span>
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M8 24 24 8M11 8h13v13" fill="none" stroke="currentColor" stroke-width="2.2"/></svg></a>
+    </div>
+    <div class="contact-bottom">
+      <span>DEVAN / CREATIVE DEVELOPER &amp; TECH DESIGNER</span>
+      <a href="#intro" class="to-top">BACK TO TOP ↑</a>
+      <span>© <span id="year">2026</span> DEVAN</span>
+    </div>
+  </footer>
+
+  <!-- ===== cookie panel ===== -->
+  <div class="cookie-launcher"><button id="cookieSettings">Cookie settings</button></div>
+  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-labelledby="cookieTitle">
+    <div>
+      <strong id="cookieTitle">Cookies</strong>
+      <p>This site uses no analytics or tracking. Your choice is only remembered in this browser.</p>
+    </div>
+    <div class="cookie-actions">
+      <button id="cookieReject">Reject</button>
+      <button id="cookieAccept">Accept</button>
+    </div>
+  </div>
+
+  <!-- ===== full-screen chapter view ===== -->
+  <div class="world-screen" id="worldScreen" aria-hidden="true">
+    <canvas class="world-art" id="worldArt"></canvas>
+    <div class="world-video-shade"></div>
+    <div class="world-ambient"><span></span><span></span><span></span></div>
+    <div class="world-body">
+      <div class="world-number" id="overlayIndex">01 / 05</div>
+      <h2 id="overlayTitle">CODE THAT<br>ACTUALLY<br>SHIPS.</h2>
+      <p id="overlayDesc"></p>
+    </div>
+    <div class="world-footer">
+      <span>DEVAN / CREATIVE WORLDS</span>
+      <span class="world-placeholder">SELECTED WORK COMING SOON</span>
+      <span id="worldTime">00:00</span>
+    </div>
+    <div class="world-progress"><span id="worldProgress"></span></div>
+  </div>
+  <button class="world-close" id="close" aria-label="Close"><span class="lbl">CLOSE</span><span>×</span></button>
+
+  <script src="content.js?v=1"></script>
+  <script src="app.js?v=4"></script>
+  <script type="module" src="scene.js?v=4"></script>
+</body>
+</html>
